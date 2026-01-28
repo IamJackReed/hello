@@ -153,6 +153,8 @@ strong {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: nowrap;
+    min-width: 0;
     gap: var(--spacing-md);
 }
 
@@ -161,6 +163,9 @@ strong {
     font-size: 1.75rem;
     font-weight: 700;
     color: #FE4B60 !important;
+    white-space: nowrap;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
 .nav-logo:hover {
@@ -205,6 +210,31 @@ strong {
 
 .nav-search button:hover {
     color: var(--color-accent);
+}
+
+/* Compact top bar on narrow screens to keep logo on one line */
+@media (max-width: 900px) {
+    .nav-container {
+        padding: var(--spacing-sm);
+    }
+
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-search {
+        padding: 0.4rem;
+    }
+
+    .nav-search input {
+        width: 140px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-search input {
+        width: 120px;
+    }
 }
 
 .nav-menu {
