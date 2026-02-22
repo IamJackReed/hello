@@ -11,6 +11,158 @@
     <link rel="stylesheet" href="dark-theme.css">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="theme-toggle.css">
+    <style>
+        /* Hero Section Responsive Styles */
+        .hero--landing .content h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero--landing .content p {
+            font-size: 1.5rem;
+            line-height: 1.7;
+            max-width: 700px;
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Quote Section Responsive Styles */
+        .quote-section blockquote p:first-child {
+            font-size: 1.5rem;
+        }
+        
+        .quote-section blockquote p:last-child {
+            font-size: 1.125rem;
+        }
+        
+        /* About Preview Responsive Styles */
+        .about-preview h2 {
+            font-size: 2rem;
+        }
+        
+        .about-preview p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+        
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .hero--landing {
+                height: 80vh !important;
+            }
+            
+            .hero--landing .content {
+                padding-top: 15vh !important;
+            }
+            
+            .hero--landing .content h1 {
+                font-size: 3.25rem;
+            }
+            
+            .hero--landing .content p {
+                font-size: 1.35rem;
+                max-width: 600px;
+            }
+            
+            .quote-section blockquote p:first-child {
+                font-size: 1.35rem;
+            }
+            
+            .quote-section blockquote p:last-child {
+                font-size: 1.05rem;
+            }
+            
+            .about-preview h2 {
+                font-size: 1.75rem;
+            }
+            
+            .about-preview p {
+                font-size: 1.05rem;
+            }
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero--landing {
+                height: 70vh !important;
+                background-position: 60% 30% !important;
+            }
+            
+            .hero--landing .content {
+                padding-top: 12vh !important;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .hero--landing .content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero--landing .content p {
+                font-size: 1.125rem;
+                max-width: 100%;
+            }
+            
+            .quote-section blockquote p:first-child {
+                font-size: 1.2rem;
+            }
+            
+            .quote-section blockquote p:last-child {
+                font-size: 1rem;
+            }
+            
+            .about-preview h2 {
+                font-size: 1.5rem;
+            }
+            
+            .about-preview p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .hero--landing {
+                height: 60vh !important;
+            }
+            
+            .hero--landing .content {
+                padding-top: 10vh !important;
+            }
+            
+            .hero--landing .content h1 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .hero--landing .content h1:last-of-type {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .hero--landing .content p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .quote-section blockquote p:first-child {
+                font-size: 1.1rem;
+            }
+            
+            .quote-section blockquote p:last-child {
+                font-size: 0.95rem;
+            }
+            
+            .about-preview h2 {
+                font-size: 1.35rem;
+            }
+            
+            .about-preview p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -21,9 +173,9 @@
                 <span></span>
                 <span></span>
             </button>
-            <a href="/hello" class="nav-logo">Jack Reed</a>
+            <a href="/" class="nav-logo">Jack Reed</a>
             <div class="nav-search">
-                <input type="text" id="search-input" placeholder="Search by hashtag..." aria-label="Search posts">
+                <input type="text" id="search-input" placeholder="Search via hashtags" aria-label="Search posts">
                 <button id="search-button" aria-label="Search">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -32,7 +184,7 @@
                 </button>
             </div>
             <ul class="nav-menu">
-                <li><a href="/hello">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="people-and-teams.html">People & Teams</a></li>
                 <li><a href="product.html">Product</a></li>
                 <li><a href="organisation-and-change.html">Organisation & Change</a></li>
@@ -56,7 +208,7 @@
         </section>
 
         <!-- Quote Section -->
-        <section style="padding: var(--spacing-xxl) 0; background-color: var(--color-bg-alt); border-bottom: 1px solid var(--color-border);">
+        <section class="quote-section" style="padding: var(--spacing-xxl) 0; background-color: var(--color-bg-alt); border-bottom: 1px solid var(--color-border);">
             <div class="container">
                 <blockquote style="max-width: 800px; margin: 0 auto; text-align: center;">
                     <p style="font-size: 1.5rem; font-style: italic; line-height: 1.6; margin-bottom: var(--spacing-lg); color: var(--color-text);">"I like figuring out how value is created - inside organisations and in the markets that price them."</p>

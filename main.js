@@ -99,7 +99,7 @@ function showDisclaimerGate() {
     // Handle decline button
     document.getElementById('decline-disclaimer').addEventListener('click', function() {
         // Navigate back to home page
-        window.location.href = '/hello/';
+        window.location.href = '/';
     });
     
     // Handle escape key
